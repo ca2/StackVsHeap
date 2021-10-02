@@ -23,12 +23,20 @@ public:
 
 };
 
+void print_int(int i)
+{
+
+   printf("\n\nEsse eh um inteiro. Estou printando o conteuhdo em decimal: %d\n\n", i);
+
+   printf("\n\nEsse eh um inteiro. Estou printando o conteuhdo em hexadecimal: %08x\n\n", i);
+
+}
+
+
 void print_int_pointer(int * pint)
 {
 
-   printf("\n\nEsse eh um inteiro. Estou printando o conteuhdo em decimal: %d\n\n", *pint);
-
-   printf("\n\nEsse eh um inteiro. Estou printando o conteuhdo em hexadecimal: %08x\n\n", *pint);
+   print_int(*pint);
 
 }
 
@@ -48,6 +56,29 @@ int main()
    uminteiro = 1;
 
    print_int_pointer(&teste.m_i1);
+
+   int * p1 = &teste.m_i1;
+
+   
+   
+   int copia_de_i1 = *p1;
+
+   ::teste copia_de_teste = teste;
+
+
+
+   ::teste * ptest2_referenciando_teste = &teste;
+
+   int * p2 = &ptest2_referenciando_teste->m_i2;
+
+   *p2 = 2;
+
+
+   p2[0] = 3;
+
+   int copia_de_inteiro = *p1;
+
+   print_int(copia_de_inteiro);
 
     std::cout << "Hello World!\n";
 }
