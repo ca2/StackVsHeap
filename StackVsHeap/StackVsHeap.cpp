@@ -10,6 +10,7 @@ public:
 
    int m_i1;
    int m_i2;
+   int m_i3;
 
 
    teste()
@@ -17,6 +18,7 @@ public:
 
       m_i1 = 0xEFCDAB89;
       m_i2 = 0xABABABAB;
+      m_i3 = -1; // 0xffffffff = 0 - 1
 
    }
 
@@ -38,6 +40,8 @@ void print_int_pointer(int * pint)
 
    print_int(*pint);
 
+   
+
 }
 
 int main()
@@ -58,8 +62,8 @@ int main()
    print_int_pointer(&teste.m_i1);
 
    int * p1 = &teste.m_i1;
-
    
+   p1[2] = 3;
    
    int copia_de_i1 = *p1;
 
