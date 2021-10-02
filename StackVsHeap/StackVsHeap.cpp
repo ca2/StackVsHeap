@@ -64,6 +64,14 @@ int main()
    int * p1 = &teste.m_i1;
    
    p1[2] = 3;
+
+   p1++;
+
+   *p1 = 4;
+
+   p1++;
+
+   p1[-1] = 5;
    
    int copia_de_i1 = *p1;
 
